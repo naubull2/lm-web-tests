@@ -3,7 +3,6 @@
 A simple web demo, chat-completion API and streamed-chat-completion API to test various language model decoding methods and parameters.
 
 
-
 For a better optimized generation, serving multiple workers and model comparisons in general I would suggest the following two repos.
 
 - [lm-sys/FastChat](https://github.com/lm-sys/FastChat) 
@@ -18,7 +17,6 @@ For a better optimized generation, serving multiple workers and model comparison
   - The basic idea is from [Yoni Gottesman's method](https://yonigottesman.github.io/2023/08/10/extractive-generative.html) where I generalized a bit.
     - Strict masking of "non-extractive" tokens from the context, is generalized into adding a "penalty score". When the penalty score is large enough ( some float range of -5 to -inf), it will be the same as the originally suggested method.
     - Instead of matching entire prefix of the generated sequence, I used n-gram prefix instead. (set `n=3` as baseline)
-
 
 
 # How-to-use
@@ -40,11 +38,9 @@ transformers==4.32.1
 ```
 
 
-
-
-
 # References
 
+- My older wrapper for FastAPI, which happens to be the same backend gradio was using. 😎 [FastJsonAPI](https://github.com/naubull2/FastJsonAPI)
 - Conversation template script from [lm-sys/FastChat](https://github.com/lm-sys/FastChat) 
 - Extractive question answering from Yoni Gottesman's [blog](https://yonigottesman.github.io/2023/08/10/extractive-generative.html)
 

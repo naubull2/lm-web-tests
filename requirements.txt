@@ -1,0 +1,7 @@
+accelerate==0.22.0
+fastapi==0.81.0
+gradio>=3.27.0
+requests==2.28.1
+uvicorn==0.18.3
+transformers==4.32.1
+

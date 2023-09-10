@@ -106,11 +106,6 @@ with gr.Blocks() as demo:
         label="Model name",
         interactive=False,
     )
-    system_prompt = gr.Textbox(
-        value="",
-        label="System prompt"
-    )
-
     bot = gr.Chatbot(
         label="Scroll down and start chatting",
         visible=True,
@@ -143,7 +138,11 @@ with gr.Blocks() as demo:
             interactive=True,
         )
 
-    inp = gr.Textbox(placeholder="Input text and press enter", label="Input")
+    system_prompt = gr.Textbox(
+        value="",
+        label="System prompt"
+    )
+    inp = gr.Textbox(placeholder="Input text and press enter", label="Input", autofocus=True)
 
     with gr.Row():
         regenerate_btn = gr.Button(value="🔄  Regenerate", interactive=False)
